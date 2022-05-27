@@ -1,6 +1,6 @@
 * {
     font-family: 'Fraunces', serif;
-    color: #fff;
+    color: #26443c;
 }
 
 body {
@@ -34,4 +34,37 @@ button {
     border: none;
     background-color: #C1E6DC;
     box-shadow: 5px 5px 10px -3px #152b2e70, -5px -5px 15px 3px #5a99ac1f;
+}
+
+button:active{
+    background-color: #ABCCC3;
+}
+
+.display{
+    grid-column: 1 / -1;
+    padding: 16px;
+    display:flex;
+    margin: 10px 10px 20px 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000025;
+}
+
+.col-2{
+    grid-column: span 2; 
+}
+
+#valor-actual {
+    font-size: 1.7em;
+    color: #fff;
+}
+
+#valor-anterior {
+    font-size: 2em;
+    color: #fff;
 }
