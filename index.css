@@ -24,3 +24,14 @@ body {
     border-radius: 32px;
     box-shadow: 15px 10px 0px 5px #00000033;
 }
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32;
+    font-size: 1.5em;
+    border: none;
+    background-color: #C1E6DC;
+    box-shadow: 5px 5px 10px -3px #152b2e70, -5px -5px 15px 3px #5a99ac1f;
+}
