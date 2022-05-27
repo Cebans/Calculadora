@@ -18,9 +18,5 @@ body {
 .calculadora {
     display: grid;
     grid-template-columns: repeat(4, 75px);
-    grid-template-rows: 160px repeat(5, 75px);
-    background-color: #C1E6DC;
-    padding: 15px;
-    border-radius: 32px;
-    box-shadow: 15px 10px 0px 5px #00000033;
+    
 }
