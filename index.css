@@ -1,11 +1,11 @@
-*{
+* {
     font-family: 'Fraunces', serif;
-    color : #fff;
+    color: #fff;
 }
 
 body {
     margin: 0;
-    background-color: #383C80;
+    background-color: #224870;
 }
 
 .container {
@@ -18,5 +18,9 @@ body {
 .calculadora {
     display: grid;
     grid-template-columns: repeat(4, 75px);
-    
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #00916e;
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 10px 0px 5px #00000033;
 }
