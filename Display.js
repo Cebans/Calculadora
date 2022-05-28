@@ -3,7 +3,6 @@ class Display {
         this.displayValorActual = displayValorActual;
         this.displayValorAnterior = displayValorAnterior;
         this.calculador = new Calculadora();
-        this.tipoOperacion = undefined;
         this.valorActual = '';
         this.valorAnterior = '';
     }
@@ -21,7 +20,8 @@ class Display {
     }
 
     agregarNumero(numero){
-        this.valorActual += numero;
+        if(numero === '.' && this.valorActual.includes('.')) return
+        this.valorActual = this.valorActual.toString() + numero.toString();
         this.imprimirValores();
     }
 
@@ -33,7 +33,6 @@ class Display {
     calcular(){
         this.valorActual = this.calculador[this.tipoOperacion](valorAnterior,this.valorActual);
     }
-
     computar(tipoOperacion){
         if(this.tipoOperacion !== 'igual' && this.calcular()){
             this.tipoOperacion = tipoOperacion;
