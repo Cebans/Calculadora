@@ -27,15 +27,19 @@ class Display {
 
     imprimirValores(){
         this.displayValorActual.textContent = this.valorActual;
-        this.displayValorAnterior.textContent = this.valorAnterior;
+        this.displayValorAnterior.textContent = this.valorAnterior; 
     }
 
     calcular(){
-        this.valorActual = this.calculador[this.tipoOperacion](valorAnterior,this.valorActual);
+        if(this.tipoOperacion=='sumar'){
+            this.valorActual = this.calculador.sumar(this.valorAnterior,this.valorActual);
+        }
+        //this.valorActual = this.calculador[this.tipoOperacion](this.valorAnterior,this.valorActual);
     }
 
     computar(tipoOperacion){
-        if(this.tipoOperacion !== 'igual' && this.calcular()){
+        if(this.tipoOperacion !== 'igual'){
+            this.calcular();
             this.tipoOperacion = tipoOperacion;
             this.valorAnterior = this.valorActual || this.valorAnterior;
             this.valorActual = '';
