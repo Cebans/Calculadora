@@ -36,15 +36,22 @@ class Display {
 
     calcular(){
         if(this.tipoOperacion=='sumar'){
+            const v = this.valorActual;
             this.valorActual = this.calculador.sumar(this.valorAnterior,this.valorActual);
+            console.log(this.valorAnterior, ' + ', v, ' = ', this.valorActual);
         } else if(this.tipoOperacion=='restar'){
+            const v = this.valorActual;
             this.valorActual = this.calculador.resta(this.valorAnterior, this.valorActual);
+            console.log(this.valorAnterior, ' - ', v, ' = ', this.valorActual);
         } else if(this.tipoOperacion=='multiplicar'){
+            const v = this.valorActual;
             this.valorActual = this.calculador.multiplicar(this.valorAnterior, this.valorActual);
+            console.log(this.valorAnterior, ' * ', v, ' = ', this.valorActual);
         } else if(this.tipoOperacion=='dividir'){
+            const v = this.valorActual;
             this.valorActual = this.calculador.dividir(this.valorAnterior, this.valorActual);
+            console.log(this.valorAnterior, ' / ', v, ' = ', this.valorActual);
         }
-        //this.valorActual = this.calculador[this.tipoOperacion](this.valorAnterior,this.valorActual);
     }
     computar(tipoOperacion){
         if(this.tipoOperacion !== 'igual'){
