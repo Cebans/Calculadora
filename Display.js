@@ -33,6 +33,12 @@ class Display {
     calcular(){
         if(this.tipoOperacion=='sumar'){
             this.valorActual = this.calculador.sumar(this.valorAnterior,this.valorActual);
+        } else if(this.tipoOperacion=='restar'){
+            this.valorActual = this.calculador.resta(this.valorAnterior, this.valorActual);
+        } else if(this.tipoOperacion=='multiplicar'){
+            this.valorActual = this.calculador.multiplicar(this.valorAnterior, this.valorActual);
+        } else if(this.tipoOperacion=='dividir'){
+            this.valorActual = this.calculador.dividir(this.valorAnterior, this.valorActual);
         }
         //this.valorActual = this.calculador[this.tipoOperacion](this.valorAnterior,this.valorActual);
     }
