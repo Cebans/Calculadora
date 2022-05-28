@@ -68,3 +68,8 @@ button:active{
     font-size: 2em;
     color: #fff;
 }
+
+#valor-operacion {
+    font-size: 1em;
+    color: #fff;
+}

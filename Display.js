@@ -1,10 +1,12 @@
 class Display {
-    constructor(displayValorAnterior, displayValorActual){
+    constructor(displayValorAnterior, displayValorActual, displayValorOperacion){
         this.displayValorActual = displayValorActual;
         this.displayValorAnterior = displayValorAnterior;
+        this.displayValorOperacion = displayValorOperacion;
         this.calculador = new Calculadora();
         this.valorActual = '';
         this.valorAnterior = '';
+        this.valorOperacion = '';
     }
 
     borrar(){
@@ -15,12 +17,13 @@ class Display {
     borrarTodo(){
         this.valorActual = '';
         this.valorAnterior = '';
+        this.valorOperacion = '';
         this.tipoOperacion = undefined;
         this.imprimirValores();
     }
 
     agregarNumero(numero){
-        if(numero === '.' && this.valorActual.includes('.')) return
+        if(numero === '.' && this.valorActual.includes('.')) return;
         this.valorActual = this.valorActual.toString() + numero.toString();
         this.imprimirValores();
     }
@@ -28,6 +31,7 @@ class Display {
     imprimirValores(){
         this.displayValorActual.textContent = this.valorActual;
         this.displayValorAnterior.textContent = this.valorAnterior; 
+        this.displayValorOperacion.textContent = this.valorOperacion;
     }
 
     calcular(){
@@ -45,10 +49,17 @@ class Display {
     computar(tipoOperacion){
         if(this.tipoOperacion !== 'igual'){
             this.calcular();
-            this.tipoOperacion = tipoOperacion;
             this.valorAnterior = this.valorActual || this.valorAnterior;
             this.valorActual = '';
+            this.valorOperacion = '';
             this.imprimirValores();
         }
+        this.tipoOperacion = tipoOperacion;
+        this.valorOperacion = '';
+    }
+
+    agregarOperador(operador){
+        this.valorOperacion = this.valorOperacion.toString() + operador.toString();
+        this.imprimirValores();
     }
 }
